@@ -1,0 +1,20 @@
+@namespace Someapp.Ui.Components
+@attribute [PiralExtension("Layout.Sidebar.Top")]
+@inject NavigationManager _navigationManager
+
+<ul>
+    <li>
+        <a @onclick=@(() => NavItemClickHandler("/someapp")) style="cursor: pointer;">Overview</a>
+    </li>
+    <li>
+        <a @onclick=@(() => NavItemClickHandler("/someapp/form")) style="cursor: pointer;">Form</a>
+    </li>
+</ul>
+
+@code{
+    void NavItemClickHandler(string url)
+    {
+        //Here we would need to close the sidebar again
+        _navigationManager.NavigateTo(url);
+    }
+}

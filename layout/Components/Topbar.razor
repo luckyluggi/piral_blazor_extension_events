@@ -1,0 +1,16 @@
+@namespace Layout.Ui.Components
+@attribute [PiralExtension("Layout.Topbar")]
+
+<div style="background: coral; padding: 10px;">
+    <a @onclick=@ToggleSidebar style="cursor: pointer;">Menu</a>
+</div>
+<Sidebar @bind-IsOpen=@_isSidebarOpen />
+
+@code{
+    bool _isSidebarOpen { get; set; } = false;
+
+    void ToggleSidebar()
+    {
+        _isSidebarOpen = !_isSidebarOpen;
+    }
+}

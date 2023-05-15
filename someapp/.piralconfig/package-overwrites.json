@@ -1,0 +1,7 @@
+{
+  "name": "someapp",
+  "scripts": {
+    "start": "pilet debug ./src/index.tsx ../layout/src/index.tsx"
+  }
+}
+ 
